@@ -1,2 +1,4 @@
+include ':module-plan'
+include ':module-home'
 include ':app'
 rootProject.name = "test"
