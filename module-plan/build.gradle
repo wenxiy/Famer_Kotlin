@@ -4,6 +4,13 @@ plugins {
 }
 
 android {
+    if (isBuildModule.toBoolean()) {
+        //作为独立App应用运行
+        apply plugin: 'com.android.application'
+    } else {
+        //作为组件运行
+        apply plugin: 'com.android.library'
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.2"
 
@@ -15,6 +22,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
+        if (isBuildModule.toBoolean()) {
+            applicationId plan
+        }
     }
 
     buildTypes {
@@ -29,6 +39,13 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+
+        dataBinding true
+
+        // for view binding:
+        viewBinding true
     }
 }
 

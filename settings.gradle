@@ -1,4 +1,7 @@
+include ':module-management'
+include ':module-analyse'
+include ':module-monitor'
 include ':module-plan'
 include ':module-home'
-include ':app'
+include ':smart-farm'
 rootProject.name = "test"

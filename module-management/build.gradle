@@ -23,7 +23,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
         if (isBuildModule.toBoolean()) {
-            applicationId home
+            applicationId management
         }
     }
 

@@ -12,9 +12,12 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/module-analyse" />
             <option value="$PROJECT_DIR$/module-home" />
+            <option value="$PROJECT_DIR$/module-management" />
+            <option value="$PROJECT_DIR$/module-monitor" />
             <option value="$PROJECT_DIR$/module-plan" />
+            <option value="$PROJECT_DIR$/smart-farm" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
