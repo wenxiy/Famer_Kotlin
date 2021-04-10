@@ -7,8 +7,12 @@
     <data>
 
         <variable
+            name="viewModel"
+            type="com.example.test.Login.iokit.ui.DataViewModel" />
+
+        <variable
             name="register_name"
-            type="com.example.test.data.AccountBean" />
+        type="com.example.test.data.AccountBean" />
 
         <variable
             name="register_password"
