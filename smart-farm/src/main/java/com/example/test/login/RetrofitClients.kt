@@ -1,4 +1,4 @@
-package com.example.test.Login.iokit
+package com.example.test.login
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
@@ -23,7 +23,7 @@ class RetrofitClients() {
             .build()
         Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl("")
+            .baseUrl("https://www.wanandroid.com")
             .client(okHttpClient)
             .build()
 

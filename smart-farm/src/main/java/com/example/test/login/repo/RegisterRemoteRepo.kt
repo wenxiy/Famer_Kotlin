@@ -1,6 +1,6 @@
-package com.example.test.Login.iokit.repo
+package com.example.test.login.repo
 
-import com.example.test.Login.iokit.RetrofitClients
+import com.example.test.login.RetrofitClients
 import retrofit2.http.GET
 import java.lang.Exception
 
@@ -10,7 +10,7 @@ class RegisterRemoteRepo (private val retrofitClients: RetrofitClients){
         return try {
            registerApi.getAccountBean()
         }
-        catch (e:Exception          ){
+        catch (e:Exception){
             e.printStackTrace()
             listOf()
         }

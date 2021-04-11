@@ -2,21 +2,21 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Login.iokit.ui.LoginActivity">
+    tools:context=".login.ui.LoginActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.example.test.Login.iokit.ui.DataViewModel" />
+            type="com.example.test.login.ui.DataViewModel" />
 
-        <variable
-            name="register_name"
-        type="com.example.test.data.AccountBean" />
+<!--        <variable-->
+<!--            name="register_name"-->
+<!--            type="com.example.test.data.AccountBean" />-->
 
-        <variable
-            name="register_password"
-            type="com.example.test.data.AccountBean" />
+<!--        <variable-->
+<!--            name="register_password"-->
+<!--            type="com.example.test.data.AccountBean" />-->
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="17"
-            android:text="@={register_name}"
+            android:text="@{viewModel.accountBean.name}"
             android:hint="@string/register_name"
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
@@ -99,6 +99,7 @@
             android:layout_height="wrap_content"
             android:ems="17"
             android:hint="@string/register_password"
+            android:text="@{viewModel.accountBean.password}"
             android:inputType="textPassword"
             app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintStart_toStartOf="@+id/guideline2"

@@ -1,4 +1,4 @@
-package com.example.test.Login.iokit.ui
+package com.example.test.login.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
 import com.example.test.Mainpage.MainPageActivity
 import com.example.test.R
+import com.example.test.data.AccountBean
 import com.example.test.databinding.ActivityLoginBinding
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -30,7 +31,9 @@ class LoginActivity : AppCompatActivity() {
             R.layout.activity_login
         )
         binding.lifecycleOwner = this  // use Fragment.viewLifecycleOwner for fragments
-         binding.viewModel = viewModel
+        binding.viewModel = viewModel
+        var accountBean = AccountBean ("yjy","wen321321")
+        viewModel.accountBean.value = accountBean
         register_go.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "click", Toast.LENGTH_LONG).show()
             val intent = Intent(this, MainPageActivity::class.java)
