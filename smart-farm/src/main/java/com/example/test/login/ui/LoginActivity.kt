@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
         )
         binding.lifecycleOwner = this  // use Fragment.viewLifecycleOwner for fragments
         binding.viewModel = viewModel
-        var accountBean = AccountBean ("yjy","wen321321")
+        var accountBean = AccountBean ()
         //viewModel.accountBean.value = accountBean
         register_go.setOnClickListener(View.OnClickListener {
             Toast.makeText(this, "click", Toast.LENGTH_LONG).show()
